@@ -1,4 +1,5 @@
-import styles from './Post.module.css';
+import { Comment } from "./Comment";
+import styles from "./Post.module.css";
 
 export function Post() {
   return (
@@ -12,19 +13,41 @@ export function Post() {
           </div>
         </div>
 
-        <time title="11 de Maio às 08:13h" dateTime="2022-05-11 08:13:00">Publicado há 1h</time>
+        <time title="11 de Maio às 08:13h" dateTime="2022-05-11 08:13:00">
+          Publicado há 1h
+        </time>
       </header>
 
       <div className={styles.content}>
         <p>Eos facilis similique</p>
-        <p>Qui voluptatem exercitationem a voluptas nesciunt ut voluptatem quia ut rerum libero qui voluptas excepturi sit itaque obcaecati. Eum sequi quasi ut consequatur repellat qui nihil voluptatem ex corporis provident a asperiores laboriosam et consequatur iusto a molestiae aspernatur.</p>
-        <p><a href="">ignite/react</a></p>
         <p>
-          <a href="">#novoprojeto</a>{' '}
-          <a href="">#nlw</a>{' '}
-          <a href="">#rocketseat</a>
+          Qui voluptatem exercitationem a voluptas nesciunt ut voluptatem quia ut rerum libero qui voluptas excepturi
+          sit itaque obcaecati. Eum sequi quasi ut consequatur repellat qui nihil voluptatem ex corporis provident a
+          asperiores laboriosam et consequatur iusto a molestiae aspernatur.
+        </p>
+        <p>
+          <a href="">ignite/react</a>
+        </p>
+        <p>
+          <a href="">#novoprojeto</a> <a href="">#nlw</a> <a href="">#rocketseat</a>
         </p>
       </div>
+
+      <form className={styles.commentForm}>
+        <strong>Deixe seu feedback</strong>
+
+        <textarea placeholder="Deixe um comentário" />
+
+        <footer>
+          <button type="submit">Publicar</button>
+        </footer>
+      </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
-  )
+  );
 }
