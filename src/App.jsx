@@ -27,7 +27,7 @@ const posts = [
     publishedAt: new Date("20223-08-12 20:00:00"),
   },
   {
-    id: 1,
+    id: 2,
     author: {
       avatarUrl: "https://github.com/rstanigher.png",
       name: "Rafa Stanigher",
@@ -55,7 +55,7 @@ export default function App() {
         <Sidebar />
         <main>
           {posts.map((post) => {
-            return <Post author={post.author} content={post.content} publishedAt={post.publishedAt} />;
+            return <Post key={post.id} author={post.author} content={post.content} publishedAt={post.publishedAt} />;
           })}
         </main>
       </div>
