@@ -24,7 +24,7 @@ const posts = [
       },
       { type: "link", content: "ignite/react" },
     ],
-    publishedAt: new Date("20223-08-12 20:00:00"),
+    publishedAt: new Date("2023-08-12 20:00:00"),
   },
   {
     id: 2,
@@ -43,7 +43,7 @@ const posts = [
       },
       { type: "link", content: "ignite/react" },
     ],
-    publishedAt: new Date("20223-08-11 20:00:00"),
+    publishedAt: new Date("2023-08-11 20:00:00"),
   },
 ];
 
